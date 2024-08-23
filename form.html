@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+
+<head> <title> Form </title> </head>
+
+<hr/>
+
+<h2> <font color="brown"> HTML Login Form </font> </h2>
+
+<hr/>
+
+<style>
+
+body
+	{
+	text-align:center;
+	}
+
+#main
+	{
+	width:30%;
+	margin:auto;
+	border:1px solid black;
+	padding:20px;
+	border-radius:20px;
+	box-shadow:0px 0px 10px gray;
+	}
+
+table
+	{
+	display:block;
+	width:100%;
+	text-align:center;
+	}
+
+td
+	{
+	width:100%;
+	}
+
+input
+	[
+	type="submit"
+	]{
+	margin-right:10px
+	}
+</style>
+
+<body>
+
+<div id="main">
+
+<table border="0" cellpadding="3%'>
+<form action="http://tataplay/user/login.php" method="post">
+
+<caption> Login Form </caption>
+<tr>
+<td> <label for="user"> User </label> </td>
+<td> <input type="text" name="user" id="user"> </td> </tr>
+
+
+<tr>
+<td> <label for="password"> Password </label> </td>
+<td> <input type="password" id="password"> </td> 
+</tr>
+
+
+<tr>
+<td></td>
+<td><input type="submit" value="Login"><input type="Reset"></td>
+</tr>
+
+</form>
+</table>
+</div>
+
+</body>
+</html>
+
+
