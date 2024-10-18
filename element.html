@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #d
+    {
+        background:red;
+        width:100px;
+        height:100px;
+        margin:auto
+    }
+    .mystyle
+    {
+        border:10px green ridge;
+        cursor: pointer
+    }
+</style>
+<body>
+    <script language="Javascript" type="text/javascript">
+/* Creating element(tag) dynamically*/
+var d = document.createElement("div")
+document.body.appendChild(d)
+d.classList.add("mystyle")
+d.style="padding:30px;text-align:center;color:green"
+d.style.width="300px"
+d.style.height="300px"
+d.style.background="cyan"
+d.style.boxShadow="10px 10px 10px black"
+d.innerHTML="<h1> ABOUT US </h1> <div id='d'>"
+document.title= "Element"
+
+var d = document.createElement("div")
+document.body.appendChild(d)
+d.classList.add("mystyle")
+d.style="padding:30px;text-align:center;color:green"
+d.style.width="300px"
+d.style.height="300px"
+d.style.background="cyan"
+d.style.boxShadow="10px 10px 10px black"
+d.innerHTML="<h1> ABOUT US </h1> <img src='Photo/1.jpg' width='50%'>"
+
+var h1 = document.createElement("h1")
+document.body.appendChild(h1)
+h1.style.fontSize="80px"
+h1.style.color="magenta"
+h1.style.background="pink"
+h1.style.fontFamily="verdana"
+h1.innerHTML="Welcome to my Website"
+</script>
+
+</body>
+</html>

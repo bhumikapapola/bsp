@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .mystyle
+    {
+        background: magenta;
+        color: yellow;
+    }
+</style>
+<body>
+    <h1 class="mystyle" id="about">Welcome To My Website</h1>
+    <img src="Photo/2.jpg">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique tempore vel in incidunt dolore, porro corporis nobis asperiores hic laborum culpa exercitationem qui quasi obcaecati eos, ducimus officiis fugiat.
+    Reiciendis cumque aperiam saepe corporis odit, sit veniam soluta, cum eum obcaecati, architecto omnis pariatur magni consequuntur? Dolorum voluptatem eius animi, provident soluta saepe quibusdam consequuntur reiciendis aspernatur doloribus labore.
+    Eius ratione distinctio suscipit commodi cupiditate dolorum tempora dolore magni itaque! Temporibus quis earum eligendi perferendis odit consectetur voluptatibus facilis numquam, inventore deleniti nam sapiente! Ut dolore et optio quidem.
+    Culpa modi voluptate quis adipisci! Quas deleniti ipsum laudantium ipsa iusto consectetur aut quo est, quaerat in sint harum atque impedit facere! Quas numquam cum facilis neque libero? Ipsam, porro.
+</p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio similique tempore vel in incidunt dolore, porro corporis nobis asperiores hic laborum culpa exercitationem qui quasi obcaecati eos, ducimus officiis fugiat.
+        Reiciendis cumque aperiam saepe corporis odit, sit veniam soluta, cum eum obcaecati, architecto omnis pariatur magni consequuntur? Dolorum voluptatem eius animi, provident soluta saepe quibusdam consequuntur reiciendis aspernatur doloribus labore.
+        Eius ratione distinctio suscipit commodi cupiditate dolorum tempora dolore magni itaque! Temporibus quis earum eligendi perferendis odit consectetur voluptatibus facilis numquam, inventore deleniti nam sapiente! Ut dolore et optio quidem.
+        Culpa modi voluptate quis adipisci! Quas deleniti ipsum laudantium ipsa iusto consectetur aut quo est, quaerat in sint harum atque impedit facere! Quas numquam cum facilis neque libero? Ipsam, porro.</p>
+
+        <script>
+            var myhead = document.getElementById("about")
+            myhead.style.background="red"
+            myhead.style.padding="5px"
+            myhead.style="color:white; text-align:center"
+
+        myhead.onclick=function()
+        {
+            myhead.style.background="orange"
+            myhead.style.cursor="pointer"
+            myhead.className="mystyle"
+        }
+
+        myhead.onmouseout=function()
+        {
+            myhead.style.background="red"
+            myhead.classname.remove("mystyle")
+        }
+
+        </script>
+</body>
+</html>
