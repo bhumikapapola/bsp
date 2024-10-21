@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="show_ad">
+    <script>
+        var box
+        function show_ad()
+        {
+            box = document.createElement("div")
+            document.body.appendChild(box)
+            box.style="width:200px; height:200px; border:1px black solid; padding:5px; text-align:center; border-radius:5px; box-shadow:0px 0px 10px black; position:absolute; left:40%"
+
+        box.innerHTML="<div style='text-align=right'> <button onclick='closedilog()'> X </button> </div>"
+
+        
+
+        box.innerHTML+="<img src='photo/gif1.gif' width='90%'>"
+
+        }
+
+        show_ad()
+        function closedilog()
+        {
+            document.body.removeChild(box)
+        }
+
+        setTimeout("closedilog()","8000")
+
+        document.title="Advertisement"
+
+    </script>
+</body>
+</html>
