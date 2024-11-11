@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #bar
+    {
+        text-align: right;
+        padding-right: 50%
+    }
+    #dark, #light
+    {
+        background: black;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div id="bar"> 
+        <button id="dark"> 🌙 </button> 
+        <button id="light"> ☀️ </button>
+    </div>
+    
+    <h1> TOPIC: switching to light and dark mode </h1>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium nulla ratione velit consectetur mollitia natus nam voluptate porro dolore enim. Eveniet quos ratione earum itaque praesentium adipisci aspernatur excepturi delectus.
+        Ullam earum minima possimus ducimus? Fugit sapiente, nisi, animi illo vel ducimus ea veritatis facere neque non aut expedita labore sunt, tenetur quisquam iure unde fuga minus cupiditate. Eum, explicabo?
+        Sequi accusantium porro ullam quis accusamus consequatur nam minima, magni odio voluptatem nisi possimus temporibus inventore error facere ipsa nobis cupiditate numquam mollitia velit illum. Obcaecati saepe accusantium quam voluptatum.
+        Quibusdam perspiciatis consequatur nam excepturi laudantium explicabo quod, aliquid, non natus, necessitatibus pariatur sint magni dolores aspernatur sequi facere ipsa id ratione? Dolorem rem, aliquam error impedit rerum assumenda eos.
+        Eius perspiciatis praesentium officiis soluta vitae quia, libero nulla iste deleniti minus, dolorum minima quas iure est nostrum quisquam, asperiores esse quasi sed eaque culpa commodi! Vel doloribus accusantium ut!
+        Accusantium architecto deserunt consequatur commodi sit nulla sunt, omnis officia tenetur ipsum sed necessitatibus corrupti quod suscipit maiores doloremque repellat unde reiciendis asperiores quasi illo. Eum corrupti voluptatem perferendis asperiores?
+        Sunt minima iusto eligendi doloremque praesentium? Sed eligendi, nostrum sunt nam recusandae qui quo corporis architecto libero voluptatibus tempora obcaecati eos, sit saepe eveniet similique ratione voluptates, numquam vero rerum?
+        Unde, labore quia vero a dolorum cumque ipsam, soluta similique ullam at ipsa officia necessitatibus quos molestiae porro suscipit deleniti delectus magnam nesciunt cum. Aliquid odit veritatis quod laborum in.
+        Ad iste facilis voluptatum, recusandae cum illo illum. Accusantium qui illo distinctio itaque ipsa beatae ut veritatis aliquid saepe eos laudantium, vitae eum aut soluta in quaerat nihil nostrum amet.
+        Nostrum nihil animi deleniti accusamus obcaecati quos, accusantium velit consequuntur pariatur perferendis ut nisi. Quisquam debitis vitae distinctio alias quod rerum minima labore impedit quis voluptatem. Accusamus repudiandae ipsum molestiae!
+    </p>
+    
+    <script>
+        var d = document.getElementById("dark")
+        var l = document.getElementById("light")
+        d.onclick = function()
+        {
+            document.body.style= "background:black; color:white"
+        }
+
+        l.onclick = function()
+        {
+            document.body.style="background:; color:;"
+        }
+        d.onmouseover = function(e)
+        {
+            m.style.opacity=1
+            m.style.top = e.pageY+4+"px"
+            m.style.left = e.pageX-20+"px"
+            m.innerHTML = "Dark Mode"
+            document.title = "x= "+e.pageX+" y="+e.pageY
+
+        }
+
+        d.onmouseout = function()
+        {
+            m.style.opacity=0
+        }
+
+        l.onmouseover = function(e)
+        {
+            m.style.opacity=1
+            m.style.top = e.pageY+4+"px"
+            m.style.left = e.pageX-20+"px"
+            m.innerHTML = "Light Mode"
+            document.title = "x= "+e.pageX+" y="+e.pageY   
+        }
+        l.onmouseout = function(e)
+        {
+            m.style.opacity=0
+        }
+
+        document.title ="Theme"
+    </script>
+</body>
+</html>
