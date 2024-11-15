@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #tool
+    {
+        width:100%;
+        margin:100px;
+        top: -40px;
+        position:fixed
+    }
+
+    #mycolor, #mycolor2
+    {
+        width:3%;
+        height: 20px;
+        border-radius:100px
+    }
+
+    p
+    {
+        font-size:15px;
+        font-family:verdana;
+        padding:fixed
+    }
+
+</style>
+
+<body>
+    <h1> Using slider (or range tool) by javascript </h1>
+<div id="tool">
+    <input id="slider1" type="range" max="50" min="15" value="15">
+    <input type="color" id="mycolor">
+    <input type="color" id="mycolor2">
+</div>
+
+<p id="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa distinctio in provident beatae minus incidunt iure suscipit. Aut quod consequuntur necessitatibus, vitae ut, numquam quas, neque eum ipsa mollitia quis.
+Nobis aspernatur hic consequuntur blanditiis numquam ea dolorem perferendis exercitationem molestias est tenetur velit, rem libero debitis tempore consequatur at nam? Aliquam vel ducimus dignissimos dolorum quod debitis pariatur quisquam?
+Cum quas, aliquam sunt tempora vero repudiandae eveniet, inventore eos porro deleniti hic doloribus? Dolore similique quas rem error hic ducimus. Dolore itaque aspernatur odio iste temporibus quas dolorum officiis.
+Libero sapiente veniam exercitationem, tenetur iste impedit officiis odit, id perspiciatis nisi nulla eius itaque, et dolor totam! Consectetur et quo ut culpa iste maiores ea sequi nobis corporis temporibus!
+Molestiae, nisi reprehenderit vitae velit recusandae inventore tempora dignissimos voluptatem earum fugiat, id beatae excepturi repellat aperiam sapiente temporibus quas, nam sequi molestias vel maxime nostrum illo itaque quos. Debitis!
+Magni vero nulla doloremque nobis quos cupiditate nihil ipsum tempore aspernatur corporis veniam dolorem, quasi hic similique iusto beatae quae harum aut nesciunt nemo! Temporibus incidunt commodi cupiditate aliquam nemo.
+Quidem nobis nostrum saepe, veritatis nam aliquam consequuntur omnis harum facilis est delectus velit neque eius doloremque inventore eveniet quos dolorem obcaecati in perferendis corporis pariatur. Iste atque dicta velit.
+Quo eius sit accusantium sequi, beatae ut! Possimus iste asperiores eos unde tempore repellendus officiis voluptatibus ipsam molestias animi vitae dolore, nostrum accusantium alias nihil omnis incidunt repellat. Inventore, praesentium!
+Eveniet, nulla quam accusamus officia vero recusandae suscipit fuga delectus, molestias accusantium illo ducimus doloribus eaque minus animi necessitatibus. Architecto quod ullam dignissimos maiores quidem aliquam adipisci, ex inventore odit!
+Ratione vel, voluptates tempore placeat quas modi. Quis vel nobis animi accusamus quod aliquam pariatur vero rem porro obcaecati neque iusto voluptas et corrupti asperiores, nam maxime repudiandae veniam ea.</p>
+
+<script>
+    var s1 = document.getElementById("slider1")
+    var c = document.getElementById("mycolor")
+    var b = document.getElementById("mycolor2")
+    var t = document.getElementById("text")
+
+
+s1.onchange = function()
+{
+    t.style.fontSize= s1.value+"px"
+}
+
+c.onchange = function()
+{
+    t.style.color = c.value
+}
+
+b.onchange = function()
+{
+    document.body.style.background = b.value
+}
+document.title = "no error";
+
+
+</script>
+
+
+
+</body>
+</html>
