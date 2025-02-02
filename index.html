@@ -5,27 +5,82 @@
 <head> <title> My Website </title> </head>
 
 <style>
+html{
+	scroll-behavior: smooth
+}
 
-#leftbar
-	{
-	width:200px;
-	height:70px;
-	padding:10px;
-	boxshadow:0px 0px 10px gray;
-	position:fixed;
-	top:50%;
-	left:-150px;
-	cursor:pointer;
-	transition:0.30;
-	border-radious:2px;
-	}
+  .dropbtn {
+    border: none;
+    cursor: pointer;
+    background-color: #0C1844;
+  }
+  
+  .dropbtn:hover {
+    background-color: #FF6969;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+}
 
-#leftbar:hover
-	{
-	left:0px;
-	background:white;
-	border-radious:4px;
-	}
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  @keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes comefromleft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #202a44;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    animation: comefromleft 0.5s ease-in-out;
+	border-radius: 10px;
+}
+  
+  .dropdown-content a {
+    color: #202a44;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #9ba3bf;
+    text-decoration: underline;
+	color: #0C1844;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    text-decoration: underline;
+  }
+
 
 @keyframes comefrombottom {
     from {margin-top: 30px;}
@@ -36,7 +91,6 @@
 {
 	width:220px; 
 	cursor:pointer;
-	title:"bhumika's profile";
 	display:block;
 	margin:auto;
 	animation: comefrombottom 2s ease-out;
@@ -47,7 +101,7 @@
     to {margin-left: 0px;}
 }
 
-	#navbar ol li
+#navbar ol li
 	{
 		animation: comefromright 1s ease-out;
 		font-family:verdana;
@@ -60,19 +114,20 @@
 		text-align:center;
 		list-style:none;
 	}
-	#navbar ol li:hover
+#navbar ol li:hover
 	{
 	font-family:verdana;
-	background:#FFB1B1;
+    width: 23%;
+	background:#0c1844d7;
 	padding:6px;
-	border-radius:40px;
+	border-radius:10px;
 	transform:scale(1.10);
 	box-shadow:0px 0px 5px #EEEDEB;
 	}
 	
-a:link{color:"#FF6969" ;text-decoration:none}
+a:link{color:#FF6969 ;text-decoration:none}
 a:hover{text-decoration:underline;color:white}
-a:visited{color:"#FF6969" }
+a:visited{color:#FF6969 }
 
 #spic
 {
@@ -89,8 +144,96 @@ height:10px;
 	{
 	    animation: fadeout 2s ease-in-out;
 }
-</style>
 
+@media screen and (max-width: 600px) {
+    #navbar ol {
+        display: none;
+    }
+
+    .dropbtn {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    #navbar ol {
+        display: none;
+    }
+
+    .dropbtn {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #navbar ol {
+        display: block;
+    }
+
+    .dropbtn {
+        display: none;
+    }
+}
+
+.work-btn{
+    background: #0c1844ca;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.work {
+    text-align: center;
+    padding: 50px;
+}
+
+.work-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.work-card {
+    background: #C80036;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease;
+    color: antiquewhite;
+}
+
+.work-card img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.work-card:hover {
+    background: #a9012e;
+    transform: scale(1.05);
+}
+
+.website {
+    text-align: center;
+    width: 100%;
+}
+
+.web-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.web-card {
+    width: 750px;
+    height: 400px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    color: antiquewhite;
+}
+
+
+</style>
+<body  style= "font-family:Helvetica" style="background-color: #FEFDED;">
 <h1
 	 style="background:#0C1844;text-align:center; font-family: 'Georgia', serif; margin-top:0px ; padding:10px">
 	 <font color= "#FF6969" >
@@ -98,21 +241,27 @@ height:10px;
 	 </font>
 	 </h1>
 
-<body  style= "font-family:Helvetica" bgcolor="FEFDED">
-<div id="navbar">
-<ol>
-	<li><a href="#about">About Me</a></li>
-	<li><a href="practicework.html"> Practice Work </a></li>
-	<li><a href="https://www.behance.net/bhumikasingh24"> Behance </a></li>
-	<li><a href="#contact">Contact</a></li>
-	</ol>
-</div>
 
-<div id="leftbar">
-	<a href="https://www.instagram.com/bhumi.shhh/"> <img src="photo/ig.png" style="width:60px"></a>
-	<a href="https://wa.me/qr/6FRX2JJT6QW6J1"> <img src="photo/wp.png"style="width:60px"></a>
-	<a href="https://in.pinterest.com/bhumishh7/"> <img src="photo/pin.png"style="width:60px"></a>
-	</div>
+	 <nav id="navbar">
+
+        <ol>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#website">Website</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ol>
+	</nav>
+		<div class="dropdown" onmousemove="animation">
+            <button class="dropbtn" > <img src="photo/menu.png" width="30px"> </button>
+            <div class="dropdown-content">
+				<a href="#about">About Me</a>
+				<a href="#work">Work</a>
+				<a href="#website">Website</a>
+				<a href="#contact">Contact</a>
+        	</div>
+		</div>
+    
+
 
 <img src="photo/bhumi.png" title="Bhumika's Profile" alt="my pic" width="200" height="267" 
 	class="picstyle">
@@ -143,6 +292,66 @@ height:10px;
 	Hello, I'm Bhumika Papola, a 19-year-old enthusiast currently pursuing graphic, web design, and development at Arena Animation. I have completed my 12th grade from the CBSE board. I am dedicated to creating innovative and functional digital experiences. Explore my work to see my passion for design and development in action.
 	</p>
 
+<h2  style= "font-family:Helvetica" bgcolor="541212">
+		<font color="C80036" face="arial">	
+		<a name="work"><b>
+		Work</b>
+		</font>
+</h2>
+	
+<hr color=#C80036 size="5"/>
+
+<section class="work">
+	<div class="work-grid">
+		<div class="work-card">
+			<img src="photo/html.png" alt="HTML work"> 
+			<h4>HTML Work</h4>
+			<a href="html.html" class="work-btn">View Work</a>
+		</div>
+		<div class="work-card">
+			<img src="photo/javascript.png" alt="JavaScript Work"> 
+			<h4>JavaScript Work</h4>
+			<a href="javascript.html" class="work-btn">View Work</a>
+		</div>
+		<div class="work-card">
+			<img src="photo/bootstrap.png" alt="bootstrap Work"> 
+			<h4>Bootstrap Work</h4>
+			<a href="bootstrap.html" class="work-btn">View Work</a>
+		</div>
+	</div>
+</section>
+
+<h2  style= "font-family:Helvetica" bgcolor="541212">
+    <font color="C80036" face="arial">	
+    <a name="website"><b>
+    Websites</b>
+    </font>
+</h2>
+
+<hr color=#C80036 size="5"/>
+
+<section class="website">
+    <div class="web-grid">
+        <div class="web-card">
+            <iframe name="myframe" src= "https://bhumikapapola.github.io/aotm/" width=100% height=280px scrolling= "yes"> </iframe>
+            <h3 style="color:#C80036">ISRO Website</h3>
+			<a href="https://bhumikapapola.github.io/aotm/" class="work-btn">View</a>
+        </div>
+        <div class="web-card">
+            <iframe name="myframe" src= "https://bhumikapapola.github.io/grocery/" width=100% height=280px scrolling= "yes"> </iframe>
+            <h3 style="color:#C80036">Grocery Website</h3>
+			<a href="https://bhumikapapola.github.io/grocery/" class="work-btn">View</a>
+        </div>
+    </div>
+    <div class="web-grid">
+        <div class="web-card">
+            <iframe name="myframe" src= "https://bhumikapapola.github.io/realestate/" width=100% height=280px scrolling= "yes"> </iframe>
+            <h3 style="color:#C80036">Realestate Website</h3>
+			<a href="https://bhumikapapola.github.io/realestate/" class="work-btn">View</a>
+        </div>
+    </div>
+</section>
+
 <h2>
 	<font color="C80036" face="arial">
 	<a name="contact"><b>
@@ -162,14 +371,8 @@ height:10px;
 	Email &nbsp; bhumikasingh2075@gmail.com
 	</h4>
 
-
-<h2
-	style="background:#0C1844; color:#FF6969; font-family: helvetica; text-align:center; margin-bottom:0px; ">
-	 &copy; 2024 Bhumika Papola All rights reserved.
-</div>
 </body>
 
 </html>
-
 
 
