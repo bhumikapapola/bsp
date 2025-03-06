@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>effects in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<style>
+    h1{
+        background: rgb(62, 18, 39);
+        color: rgb(202, 125, 162);
+        font-size: 50px;
+        padding: 5px;
+        width: auto;
+        margin: auto;
+        text-align: center;
+        box-shadow: 0px 0px 10px black;
+    }
+
+    h3{
+        background: rgb(62, 18, 39);
+        color: rgb(202, 125, 162);
+        padding: 10px;
+        width: 500px;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0px 0px 7px black;
+        margin: left;
+        margin-top: 20px;
+    }
+    .box {
+            width: 700px;
+            height: 100px;
+            background-color: rgb(243, 174, 174);
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            color: rgb(61, 50, 50);
+        }
+
+</style>
+<body>
+    <h1>Effects in jQuery</h1>
+    <h3>Hide/Show Effect</h3>
+    <button id="hideshow">Hide/Show</button>
+    <div id="box1" class="box">Box 1</div>
+    <h3>Fade Effect</h3>
+    <button id="fade">Fade</button>
+    <div id="box2" class="box">Box 2</div>
+    <h3>Slide Effect</h3>
+    <button id="slide">Slide</button>
+    <div id="box3" class="box">Box 3</div>
+    <h3>Animation Effect</h3>
+    <button id="animate">Animate</button>
+    <div id="box4" class="box">Box 4</div>
+    <h3>Chaining Effect</h3>
+    <button id="chaining">Chaining</button>
+    <div id="box5" class="box">Box 5</div>
+    <h3>Callback Effect</h3>
+    <button id="callback">Callback</button>
+    <div id="box6" class="box">Box 6</div>
+    
+    <script>
+        $(document).ready(function() {
+            $("#hideshow").click(function() {
+                $("#box1").toggle()
+            })
+            
+            $("#fade").click(function() {
+                $("#box2").fadeToggle()
+            })
+            
+            $("#slide").click(function() {
+                $("#box3").slideToggle()
+            })
+            
+            $("#animate").click(function() {
+                $("#box4").animate({ width: "200px", height: "200px" })
+            })
+            
+            $("#chaining").click(function() {
+                $("#box5").css("background-color", "blue").slideUp(1000).slideDown(1000).fadeOut(1000).css("width", "300px", "1000")
+            })
+            
+            $("#callback").click(function() {
+                $("#box6").fadeOut(1000, function() {
+                    alert("Box 6 has faded out!")
+                })
+            })
+        })
+    </script>
+</body>
+</html>
