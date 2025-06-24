@@ -1,152 +1,279 @@
-
-<!doctype html>
-
-<html>
-
-<head> <title> My Website </title> </head>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <style>
-html{
-	scroll-behavior: smooth
-}
-
-  .dropbtn {
-    border: none;
-    cursor: pointer;
-    background-color: #0C1844;
-  }
-  
-  .dropbtn:hover {
-    background-color: #FF6969;
-    transform: scale(1.1);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
-}
-
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  @keyframes dropdownFade {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
+    html {
+        scroll-behavior: smooth;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    body {
+        font-family: Helvetica;
+        background-color: #F0ECE2;
     }
-}
 
-@keyframes comefromleft {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
+    .dropbtn {
+        border: none;
+        cursor: pointer;
+        background-color: #010101;
     }
-    to {
-        opacity: 1;
-        transform: translateX(0);
+
+    .dropbtn:hover {
+        background-color: #69779B;
+        transform: scale(1.1);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
     }
-}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #202a44;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    animation: comefromleft 0.5s ease-in-out;
-	border-radius: 10px;
-}
-  
-  .dropdown-content a {
-    color: #202a44;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #9ba3bf;
-    text-decoration: underline;
-	color: #0C1844;
-}
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    text-decoration: underline;
-  }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
 
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #69779B;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        animation: comefromleft 0.5s ease-in-out;
+        border-radius: 10px;
+    }
 
-@keyframes comefrombottom {
-    from {margin-top: 30px;}
-    to {margin-top: 0px;}
-}
+    .dropdown-content a {
+        color: #010101;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
 
-.picstyle
-{
-	width:220px; 
-	cursor:pointer;
-	display:block;
-	margin:auto;
-	animation: comefrombottom 2s ease-out;
+    .dropdown-content a:hover {
+        background-color: #ACDBDF;
+        text-decoration: underline;
+        color: #010101;
+    }
 
-}
-@keyframes comefromright {
-    from {margin-left: 10px;}
-    to {margin-left: 0px;}
-}
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
 
-#navbar ol li
-	{
-		animation: comefromright 1s ease-out;
-		font-family:verdana;
-		width:23%;
-		padding:6px;
-		display:inline-block;
-		margin:auto;
-		cursor:pointer;
-		transition:0.50s;
-		text-align:center;
-		list-style:none;
-	}
-#navbar ol li:hover
-	{
-	font-family:verdana;
-    width: 23%;
-	background:#0c1844d7;
-	padding:6px;
-	border-radius:10px;
-	transform:scale(1.10);
-	box-shadow:0px 0px 5px #EEEDEB;
-	}
-	
-a:link{color:#FF6969 ;text-decoration:none}
-a:hover{text-decoration:underline;color:white}
-a:visited{color:#FF6969 }
+    .dropdown:hover .dropbtn {
+        text-decoration: underline;
+    }
 
-#spic
-{
-width:10px;
-height:10px;
-}
+    @keyframes dropdownFade {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
-@keyframes fadeout {
-    from {opacity: 0}
-    to {opacity: 0.99;}
-}
+    @keyframes comefromleft {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
 
-#fadeout
-	{
-	    animation: fadeout 2s ease-in-out;
-}
+    @keyframes comefrombottom {
+        from {
+            margin-top: 30px;
+        }
+        to {
+            margin-top: 0px;
+        }
+    }
 
-@media screen and (max-width: 600px) {
+    @keyframes comefromright {
+        from {
+            margin-left: 10px;
+        }
+        to {
+            margin-left: 0px;
+        }
+    }
+
+    @keyframes fadeout {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 0.99;
+        }
+    }
+
+    #fadeout {
+        animation: fadeout 2s ease-in-out;
+    }
+
+    #navbar {
+        position: sticky;
+        top: 0;
+        background-color: #F0ECE2;
+        z-index: 999;
+    }
+
+    #navbar ol li {
+        animation: comefromright 1s ease-out;
+        font-family: verdana;
+        width: 23%;
+        padding: 6px;
+        display: inline-block;
+        margin: auto;
+        cursor: pointer;
+        transition: 0.50s;
+        text-align: center;
+        list-style: none;
+    }
+
+    #navbar ol li:hover {
+        background: #010101;
+        color: #F0ECE2;
+        border-radius: 10px;
+        transform: scale(1.04);
+        box-shadow: 0px 0px 5px #ACDBDF;
+    }
+
+    a:link {
+        color: #69779B;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: #f4f2f2;
+    }
+
+    a:visited {
+        color: #69779B;
+    }
+
+    .picstyle {
+        width: 220px;
+        cursor: pointer;
+        display: block;
+        margin: auto;
+        animation: comefrombottom 2s ease-out;
+    }
+
+    .work-btn {
+        background: #010101;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: 0.50s;
+        color: #F0ECE2;
+    }
+
+    .work-btn:hover {
+        transform: scale(1.04);
+        box-shadow: 0px 0px 2px rgba(14, 14, 14, 0.733);
+    }
+
+    .work {
+        text-align: center;
+        padding: 50px;
+    }
+
+    .work-grid {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .work-card {
+        background: #69779B;
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        text-align: center;
+        transition: transform 0.3s ease;
+        color: #F0ECE2;
+    }
+
+    .work-card img {
+        width: 200px;
+        border-radius: 10px;
+    }
+
+    .work-card:hover {
+        background: #010101;
+        transform: scale(1.05);
+    }
+
+    .website {
+        text-align: center;
+        width: 100%;
+    }
+
+    .web-grid {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .web-card {
+        width: 750px;
+        height: 400px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        color: #010101;
+    }
+
+    .header {
+        background: #010101;
+        text-align: center;
+        font-family: 'Georgia', serif;
+        padding: 10px;
+        color: #ACDBDF;
+    }
+
+    .tagline {
+        margin: auto;
+        text-align: center;
+        font-family: 'Helvetica', sans-serif;
+        color: #69779B;
+        font-size: 22px;
+    }
+
+    .name-title {
+        font-size: 30px;
+        text-align: center;
+        color: #69779B;
+        font-family: Verdana;
+    }
+
+    .section-title {
+        font-family: Helvetica;
+        color: #69779B;
+    }
+
+    hr {
+        color: #69779B;
+    }
+
+    .section-text {
+        color: #010101;
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .contact-text {
+        color: #010101;
+    }
+
+    @media screen and (max-width: 600px) {
     #navbar ol {
         display: none;
     }
@@ -176,74 +303,22 @@ height:10px;
     }
 }
 
-.work-btn{
-    background: #0c1844ca;
-    padding: 10px 20px;
-    border-radius: 10px;
+.head{
+    font-family: arial ;
+    font-size: 30px;
+    text-decoration: bold;
+    color: whitesmoke;
+    background-color: #0c1844ca;
+    padding: 10px;
+    width: 110%;
 }
-
-.work {
-    text-align: center;
-    padding: 50px;
-}
-
-.work-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.work-card {
-    background: #C80036;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    text-align: center;
-    transition: transform 0.3s ease;
-    color: antiquewhite;
-}
-
-.work-card img {
-    width: 200px;
-    border-radius: 10px;
-}
-
-.work-card:hover {
-    background: #a9012e;
-    transform: scale(1.05);
-}
-
-.website {
-    text-align: center;
-    width: 100%;
-}
-
-.web-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.web-card {
-    width: 750px;
-    height: 400px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    color: antiquewhite;
-}
-
-
 </style>
-<body  style= "font-family:Helvetica" style="background-color: #FEFDED;">
-<h1
-	 style="background:#0C1844;text-align:center; font-family: 'Georgia', serif; margin-top:0px ; padding:10px">
-	 <font color= "#FF6969" >
-	 Bhumika Papola's Personal Website
-	 </font>
-	 </h1>
+<header class="head">
+    Bhumika Papola.
+</header>
+<body>
 
-
-	 <nav id="navbar">
+    <nav id="navbar">
 
         <ol>
             <li><a href="#about">About Me</a></li>
@@ -261,170 +336,85 @@ height:10px;
 				<a href="#contact">Contact</a>
         	</div>
 		</div>
-    
 
+  <img src="photo/bhumi.png" title="Bhumika's Profile" alt="my pic" class="picstyle">
 
-<img src="photo/bhumi.png" title="Bhumika's Profile" alt="my pic" width="200" height="267" 
-	class="picstyle">
+  <h1 class="name-title">Bhumika Papola</h1>
+  <p class="tagline">Graphic Designer</p>
 
-<h1 
-	style= "font-size:30px;text-align:center"> 
-	<font color=#C80036 face=Verdana> 
-	Bhumika Papola 
-	</font> 
-	 </h1>
+  <div id="fadeout">
+    <h2 class="section-title" id="about">About me</h2>
+    <hr color="#69779B" size="5" />
+    <p class="section-text">
+      Hello, I'm Bhumika Papola, a 19-year-old enthusiast currently pursuing graphic, web design, and development at Arena Animation. I have completed my 12th grade from the CBSE board. I am dedicated to creating innovative and functional digital experiences. Explore my work to see my passion for design and development in action.
+    </p>
 
-<p 
-	style="margin:auto;text-align:center; font-family:'Helvetica', san-serif; color:#C80036; font-size:22px">
-	Graphic Designer
-	</p>
-<div id= "fadeout">
-<h2  style= "font-family:Helvetica" bgcolor="541212">
-	<font color="C80036" face="arial">	
-	<a name="about"><b>
-	About me</b>
-	</font>
-	</h2>
+    <h2 class="section-title" id="work">Work</h2>
+    <hr color="#69779B" size="5" />
+    <section class="work">
+      <div class="work-grid">
+        <div class="work-card">
+          <img src="photo/html.png" alt="HTML work">
+          <h4>HTML Work</h4>
+          <a href="html.html" class="work-btn">View Work</a>
+        </div>
+        <div class="work-card">
+          <img src="photo/javascript.png" alt="JavaScript Work">
+          <h4>JavaScript Work</h4>
+          <a href="javascript.html" class="work-btn">View Work</a>
+        </div>
+        <div class="work-card">
+          <img src="photo/bootstrap.png" alt="Bootstrap Work">
+          <h4>Bootstrap Work</h4>
+          <a href="bootstrap.html" class="work-btn">View Work</a>
+        </div>
+      </div>
+      <div class="work-grid">
+        <div class="work-card" style="width:355px; margin-top: 20px; margin-left: -860px;">
+          <img src="photo/php.png" alt="PHP work">
+          <h4>PHP Work</h4>
+          <a href="http://bhumikapapola.42web.io/bhumikaphp" class="work-btn">View Work</a>
+        </div>
+      </div>
+    </section>
 
-<hr color=#C80036 size="5"/>
-
-<p 
-	style="color:#0C1844 ;font-size:18px;text-align:justify">
-	Hello, I'm Bhumika Papola, a 19-year-old enthusiast currently pursuing graphic, web design, and development at Arena Animation. I have completed my 12th grade from the CBSE board. I am dedicated to creating innovative and functional digital experiences. Explore my work to see my passion for design and development in action.
-	</p>
-
-<h2  style= "font-family:Helvetica" bgcolor="541212">
-		<font color="C80036" face="arial">	
-		<a name="work"><b>
-		Work</b>
-		</font>
-</h2>
-	
-<hr color=#C80036 size="5"/>
-
-<section class="work">
-	<div class="work-grid">
-		<div class="work-card">
-			<img src="photo/html.png" alt="HTML work"> 
-			<h4>HTML Work</h4>
-			<a href="html.html" class="work-btn">View Work</a>
-		</div>
-		<div class="work-card">
-			<img src="photo/javascript.png" alt="JavaScript Work"> 
-			<h4>JavaScript Work</h4>
-			<a href="javascript.html" class="work-btn">View Work</a>
-		</div>
-		<div class="work-card">
-			<img src="photo/bootstrap.png" alt="bootstrap Work"> 
-			<h4>Bootstrap Work</h4>
-			<a href="bootstrap.html" class="work-btn">View Work</a>
-		</div>
-	</div>
-	<div class="work-grid">
-		<div class="work-card" style="width:355px; margin-top: 20px; margin-left: -820px;">
-			<img src="photo/php.png" alt="PHP work"> 
-			<h4>PHP Work</h4>
-			<a href="jquery.html" class="work-btn">View Work</a>
-		</div>
-	</div>
-</section>
-	
-
-<h2  style= "font-family:Helvetica" bgcolor="541212">
-    <font color="C80036" face="arial">	
-    <a name="website"><b>
-    Websites</b>
-    </font>
-</h2>
-
-<hr color=#C80036 size="5"/>
-
-<section class="website">
-    <div class="web-grid">
+    <h2 class="section-title" id="website">Websites</h2>
+    <hr color="#69779B" size="5" />
+    <section class="website">
+      <div class="web-grid">
         <div class="web-card">
-            <iframe name="myframe" src= " https://bhumikapapola.github.io/isro/" width=100% height=280px scrolling= "yes"> </iframe>
-            <h3 style="color:#C80036">ISRO Website</h3>
-			<a href=" https://bhumikapapola.github.io/isro/" class="work-btn">View</a>
+          <iframe src="https://bhumikapapola.github.io/isro/" width="100%" height="280" scrolling="yes"></iframe>
+          <h3>ISRO Website</h3>
+          <a href="https://bhumikapapola.github.io/isro/" class="work-btn">View</a>
         </div>
         <div class="web-card">
-            <iframe name="myframe" src= "https://bhumikapapola.github.io/grocery/" width=100% height=280px scrolling= "yes"> </iframe>
-            <h3 style="color:#C80036">Grocery Website</h3>
-			<a href="https://bhumikapapola.github.io/grocery/" class="work-btn">View</a>
+          <iframe src="https://bhumikapapola.github.io/grocery/" width="100%" height="280" scrolling="yes"></iframe>
+          <h3>Grocery Website</h3>
+          <a href="https://bhumikapapola.github.io/grocery/" class="work-btn">View</a>
         </div>
-    </div>
-    <div class="web-grid">
+      </div>
+      <div class="web-grid">
         <div class="web-card">
-            <iframe name="myframe" src= "https://bhumikapapola.github.io/realestate/" width=100% height=280px scrolling= "yes"> </iframe>
-            <h3 style="color:#C80036">Realestate Website</h3>
-			<a href="https://bhumikapapola.github.io/realestate/" class="work-btn">View</a>
+          <iframe src="https://bhumikapapola.github.io/realestate/" width="100%" height="280" scrolling="yes"></iframe>
+          <h3>Realestate Website</h3>
+          <a href="https://bhumikapapola.github.io/realestate/" class="work-btn">View</a>
         </div>
-	<div class="web-card">
-            <iframe name="myframe" src= " https://bhumikapapola.github.io/aotm/" width=100% height=280px scrolling= "yes"> </iframe>
-            <h3 style="color:#C80036">Botanical Garden Website</h3>
-			<a href=" https://bhumikapapola.github.io/aotm/" class="work-btn">View</a>
+        <div class="web-card">
+          <iframe src="https://bhumikapapola.github.io/aotm/" width="100%" height="280" scrolling="yes"></iframe>
+          <h3>Botanical Garden Website</h3>
+          <a href="https://bhumikapapola.github.io/aotm/" class="work-btn">View</a>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<h2>
-	<font color="C80036" face="arial">
-	<a name="contact"><b>
-	Contact</b>
-	</font>
-	</h2>
+    <h2 class="section-title" id="contact">Contact</h2>
+    <hr color="#69779B" size="5" />
+    <h4 class="contact-text">
+      Feel free to reach out to me via<br />
+      Phone: 9311467663<br />
+      Email: bhumikasingh2075@gmail.com
+    </h4>
+  </div>
 
-<hr color=#C80036 size="5"/>
-
-
-<h4 
-	style="color:#0C1844">
-	Feel free to reach out to me via
-	<br/>
-	Phone no. &nbsp;  9311467663 
-	<br/>
-	Email &nbsp; bhumikasingh2075@gmail.com
-	</h4>
-
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
 </body>
-
 </html>
-
-
